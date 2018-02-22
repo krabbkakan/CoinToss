@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="av1-do-VJi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dandeleon Vintage Demo.otf">
+            <string>DandeleonVintageDemo</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fKj-nm-EiU">
+            <objects>
+                <viewController id="av1-do-VJi" customClass="ViewController" customModule="CoinFlipSwipeView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G21-x9-8vA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyy-qK-lA3">
+                                <rect key="frame" x="112" y="136" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="aI7-Fk-vOv"/>
+                                    <constraint firstAttribute="height" constant="150" id="xSl-32-Vsq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUw-cc-Bfy" propertyAccessControl="localizable">
+                                <rect key="frame" x="0.0" y="560" width="376" height="47"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="29"/>
+                                <color key="tintColor" red="1" green="0.67769555349999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="TOSS">
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipButtonPushed:" destination="av1-do-VJi" eventType="touchUpInside" id="tSj-g4-Dno"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79524619095903393" green="0.96897417306900024" blue="0.77571688779529713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lRD-uJ-MHi" firstAttribute="bottom" secondItem="LUw-cc-Bfy" secondAttribute="bottom" constant="60" id="4LO-7e-MVc"/>
+                            <constraint firstItem="LUw-cc-Bfy" firstAttribute="centerX" secondItem="G21-x9-8vA" secondAttribute="centerX" id="Iid-tC-dFP"/>
+                            <constraint firstItem="xyy-qK-lA3" firstAttribute="centerX" secondItem="G21-x9-8vA" secondAttribute="centerX" id="JYV-br-CGu"/>
+                            <constraint firstItem="LUw-cc-Bfy" firstAttribute="leading" secondItem="G21-x9-8vA" secondAttribute="leading" id="rGJ-Wa-Eym"/>
+                            <constraint firstItem="xyy-qK-lA3" firstAttribute="top" secondItem="lRD-uJ-MHi" secondAttribute="top" constant="116" id="vf7-C9-ISt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lRD-uJ-MHi"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Nie-4M-AEq" appends="YES" id="LKd-yU-dB0"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="coinImageview" destination="xyy-qK-lA3" id="aKU-Ef-y5u"/>
+                        <segue destination="EQd-9B-aqw" kind="presentation" identifier="goRight" customClass="SegueFromRight" customModule="CoinFlipSwipeView" customModuleProvider="target" id="foC-r1-uuz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wkt-Qa-NMf" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Nie-4M-AEq"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="ucT-Vp-nxa">
+            <objects>
+                <viewController id="EQd-9B-aqw" customClass="ViewController2" customModule="CoinFlipSwipeView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="aFM-fM-wtM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuE-pU-Nmi" propertyAccessControl="localizable">
+                                <rect key="frame" x="1" y="560" width="375" height="47"/>
+                                <color key="backgroundColor" red="0.97452288866043091" green="0.83613806962966919" blue="0.52535051107406616" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="29"/>
+                                <color key="tintColor" red="1" green="0.67769555349999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="TOSS">
+                                    <color key="titleColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipButtonPushed:" destination="EQd-9B-aqw" eventType="touchUpInside" id="lcq-Tv-uya"/>
+                                    <action selector="playSound:" destination="av1-do-VJi" eventType="touchUpInside" id="ick-G9-1kZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-v4-9FR" propertyAccessControl="localizable">
+                                <rect key="frame" x="131" y="446" width="113" height="30"/>
+                                <color key="backgroundColor" red="0.97452288866043091" green="0.83613806962966919" blue="0.52535051107406616" alpha="0.72035530821917804" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="nOk-Hy-l29"/>
+                                </constraints>
+                                <state key="normal" title="ADD">
+                                    <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddButton:" destination="EQd-9B-aqw" eventType="touchUpInside" id="dGd-3e-Vhf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your own coin!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaR-sy-sPH" propertyAccessControl="localizable">
+                                <rect key="frame" x="60" y="20" width="255" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TPs-8K-ggd">
+                                <rect key="frame" x="20" y="324" width="335" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="HEADS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VI2-gS-X3u">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.79644691780821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.62572348997602334" green="0.76870665846742348" blue="0.61704074584184643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TAILS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8QX-FA-XTc">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.6036226455479452" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.62572348997602334" green="0.76870665846742348" blue="0.61704074584184643" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U7-VZ-25a">
+                                <rect key="frame" x="0.0" y="106" width="375" height="210"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i0C-7k-5Vv">
+                                        <rect key="frame" x="113" y="30" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="43N-5x-cnq"/>
+                                            <constraint firstAttribute="width" constant="150" id="dkY-F8-SwN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYu-AG-wBW">
+                                        <rect key="frame" x="113" y="82" width="150" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="3NZ-R3-Q2L"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="IRT-Gb-WtW"/>
+                                            <constraint firstAttribute="width" constant="150" id="w6b-4V-FsC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DandeleonVintageDemo" family="Dandeleon Vintage Demo" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sYu-AG-wBW" secondAttribute="bottom" constant="82" id="QKT-rv-mSN"/>
+                                    <constraint firstAttribute="bottom" secondItem="i0C-7k-5Vv" secondAttribute="bottom" constant="30" id="RrG-Fj-vqd"/>
+                                    <constraint firstItem="i0C-7k-5Vv" firstAttribute="centerX" secondItem="8U7-VZ-25a" secondAttribute="centerX" id="Wb8-rD-ETY"/>
+                                    <constraint firstItem="i0C-7k-5Vv" firstAttribute="top" secondItem="8U7-VZ-25a" secondAttribute="top" constant="30" id="ZA7-GA-Fm9"/>
+                                    <constraint firstItem="sYu-AG-wBW" firstAttribute="top" secondItem="8U7-VZ-25a" secondAttribute="top" constant="82" id="d7h-hE-3hO"/>
+                                    <constraint firstItem="sYu-AG-wBW" firstAttribute="centerX" secondItem="8U7-VZ-25a" secondAttribute="centerX" id="xme-rh-DeA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.81176470588235294" blue="0.91764705882352937" alpha="0.8419574058219178" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="inA-wP-IGV" firstAttribute="trailing" secondItem="TPs-8K-ggd" secondAttribute="trailing" constant="20" id="3jv-R7-3wS"/>
+                            <constraint firstAttribute="trailing" secondItem="kuE-pU-Nmi" secondAttribute="trailing" id="6nB-cJ-MNW"/>
+                            <constraint firstAttribute="trailing" secondItem="8U7-VZ-25a" secondAttribute="trailing" id="9FA-Qw-ZsS"/>
+                            <constraint firstItem="8U7-VZ-25a" firstAttribute="leading" secondItem="inA-wP-IGV" secondAttribute="leading" id="ERh-wj-814"/>
+                            <constraint firstItem="SaR-sy-sPH" firstAttribute="top" secondItem="inA-wP-IGV" secondAttribute="top" id="FAw-N7-5co"/>
+                            <constraint firstItem="kuE-pU-Nmi" firstAttribute="centerX" secondItem="aFM-fM-wtM" secondAttribute="centerX" id="Ktc-Dq-jOA"/>
+                            <constraint firstItem="Kdf-v4-9FR" firstAttribute="top" secondItem="TPs-8K-ggd" secondAttribute="bottom" constant="52" id="LTt-uI-dRL"/>
+                            <constraint firstItem="SaR-sy-sPH" firstAttribute="centerX" secondItem="aFM-fM-wtM" secondAttribute="centerX" id="Lad-3s-KHi"/>
+                            <constraint firstItem="8U7-VZ-25a" firstAttribute="top" secondItem="SaR-sy-sPH" secondAttribute="bottom" constant="51" id="NNh-3q-4Sw"/>
+                            <constraint firstItem="Kdf-v4-9FR" firstAttribute="centerX" secondItem="aFM-fM-wtM" secondAttribute="centerX" id="WJH-v1-iTf"/>
+                            <constraint firstItem="kuE-pU-Nmi" firstAttribute="leading" secondItem="inA-wP-IGV" secondAttribute="leading" id="Xrz-lB-VtR"/>
+                            <constraint firstItem="inA-wP-IGV" firstAttribute="bottom" secondItem="kuE-pU-Nmi" secondAttribute="bottom" constant="60" id="b0r-y8-1d8"/>
+                            <constraint firstItem="TPs-8K-ggd" firstAttribute="top" secondItem="8U7-VZ-25a" secondAttribute="bottom" constant="8" id="cLB-oC-Doe"/>
+                            <constraint firstItem="TPs-8K-ggd" firstAttribute="leading" secondItem="inA-wP-IGV" secondAttribute="leading" constant="20" id="uFL-bi-6cz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="inA-wP-IGV"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="Kdf-v4-9FR" id="nNN-6b-Kvd"/>
+                        <outlet property="coinImageview2" destination="i0C-7k-5Vv" id="FU4-zF-GJ3"/>
+                        <outlet property="coinText" destination="sYu-AG-wBW" id="ERd-Sm-LJV"/>
+                        <outlet property="headsTextField" destination="VI2-gS-X3u" id="w3D-XT-w0P"/>
+                        <outlet property="makeYourOwnLabel" destination="SaR-sy-sPH" id="fGL-Nh-0Fm"/>
+                        <outlet property="tailsTextField" destination="8QX-FA-XTc" id="uzX-b1-jLe"/>
+                        <outlet property="tossButton" destination="kuE-pU-Nmi" id="AnG-3e-VHU"/>
+                        <segue destination="av1-do-VJi" kind="presentation" identifier="goLeft" customClass="SegueFromLeft" customModule="CoinFlipSwipeView" customModuleProvider="target" id="fy9-lo-0mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whz-Vb-NCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
